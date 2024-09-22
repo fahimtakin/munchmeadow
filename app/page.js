@@ -1,21 +1,48 @@
 import Link from "next/link";
-
+import classes from "./page.module.css";
 export default function Home() {
   return (
-    <main>
-      <h1 style={{ color: "white", textAlign: "center" }}>
-        Time to get started!
-      </h1>
+    <>
+      <header className={classes.header}>
+        <div className={classes.slideshow}></div>
+        <div>
+          <div className={classes.hero}>
+            <h1>munchmeadow anytime!</h1>
+            <p>Taste the best!</p>
+          </div>
+          <div className={classes.cta}>
+            <Link href="/community">Join the Community</Link>
+            <Link href="/meals">Explore Meals</Link>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section className={classes.section}>
+          <h2>How it works</h2>
+          <p>
+            Munchmeadow Food is a platform for foodies to share their favorite
+            recipes with the world. It&apos;s a place to discover new dishes,
+            and to connect with other food lovers.
+          </p>
+          <p>
+            Munchmeadow Food is a place to discover new dishes, and to connect
+            with other food lovers.
+          </p>
+        </section>
 
-      <p>
-        <Link href="/meals">Page 1</Link>
-      </p>
-      <p>
-        <Link href="/meals/share">Share Meals</Link>
-      </p>
-      <p>
-        <Link href="/community">Community</Link>
-      </p>
-    </main>
+        <section className={classes.section}>
+          <h2>Why Munchmeadow Food?</h2>
+          <p>
+            Munchmeadow is a platform for foodies to share their favorite
+            recipes with the world. It&apos;s a place to discover new dishes,
+            and to connect with other food lovers.
+          </p>
+          <p>
+            Munchmeadow is a place to discover new dishes, and to connect with
+            other food lovers.
+          </p>
+        </section>
+      </main>
+    </>
   );
 }
